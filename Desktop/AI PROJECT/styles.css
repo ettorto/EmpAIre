@@ -1,0 +1,274 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100px;
+  height: 100vh;
+  background-color: rgb(7, 7, 18);
+}
+#house {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(10, 10, 43);
+}
+#logo{
+  position:absolute;
+  top : 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+#container{
+  position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#text{
+  color: white;
+  margin-bottom: 25px;
+  font-size: 15px;
+  letter-spacing: 6px;
+  font-weight: lighter;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#loading{
+  width: 180%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-30%, -50%);
+}
+#loading #line-box{
+  padding: 2px;
+  width: 100%;
+  height: 30px;
+  border: 2px solid #267591;
+  border-radius: 12px;
+}
+#loading #line-box #line{
+  height: 20px;
+  border-radius: 20px;
+  background: #67D295;
+  animation: loading 12s forwards cubic-bezier(0,0,0,0);
+}
+@keyframes loading{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width:100%;
+  }
+}
+#recorder {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 1.5s linear infinite;
+}
+
+svg#record{
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  animation: animate 1.5s linear infinite;
+}
+
+#play {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 1.5s linear infinite;
+}
+
+#shape1{
+  fill:rgb(41, 35, 35);
+}
+#shape2 {
+  fill: rgb(41, 35, 35);
+}
+#shape3 {
+  fill: rgb(41, 35, 35);
+}
+#shape4 {
+  fill: rgb(41, 35, 35);
+}
+#shape5 {
+  fill: rgb(41, 35, 35);
+}
+#shape6 {
+  fill: rgb(41, 35, 35);
+}
+
+#input{
+  position:absolute;
+  width: 800px;
+  height: 50px;
+  top: 350px;
+  border-radius: 20px;
+  background: rgb(200, 176, 176);
+  transform: translate(-50%, -50%);
+  z-index:-1;
+}
+
+#input .talk{
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:15px;
+}
+
+#input .talk i{
+  font-size: 35px;
+  position: fixed;
+  color:black;
+}
+
+#input .content{
+  color: black;
+  font-size:22px;
+  margin-right:20px;
+  transform:translate(44%, -140%);
+}
+
+#filter-blur {
+  position:absolute;
+  width: 70vw;
+  height: 80vh;
+  transform:translate(-50%, -40%);
+  background: rgba(43, 40, 40, 0.6);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+}
+
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: -3px;
+  transform: scale(1.5);
+}
+
+.loader {
+  height: 10px;
+  width: 5px;
+  position: absolute;
+  animation: rotate 3.5s linear infinite;
+}
+
+.loader .dot {
+  top: 30px;
+  height: 7px;
+  width: 8px;
+  background: rgb(241, 241, 241);
+  border-radius: 50%;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  bottom: -240px;
+  font-size: 30px;
+  width:300px;
+  transform:translate(-20%, -20%);
+  font-weight: 400;
+  color: #fff;
+}
+
+@keyframes rotate {
+  30% {
+    transform: rotate(220deg);
+  }
+
+  40% {
+    transform: rotate(450deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+
+.loader:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.loader:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.loader:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loader:nth-child(5) {
+  animation-delay: 0.75s;
+}
+
+.loader:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
